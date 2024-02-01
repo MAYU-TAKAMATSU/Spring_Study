@@ -17,6 +17,7 @@ public class UserForm {
 	private String name;
 
 	@Email(message = "E-Mailを正しい形式で入力してください。", groups = Group1.class)
+	
 	private String email;
 
 	@NotNull(message = "年齢を入力してください。", groups = Group1.class)
@@ -25,7 +26,7 @@ public class UserForm {
 	private Integer age;
 	
 	@Size(max = 20, message = "備考は20文字以内で入力してください。", groups = Group1.class)
-	private String notes;
+	private String note;
 
 	public interface Group1 {
 	}
