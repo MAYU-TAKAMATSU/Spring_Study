@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html th:lang="ja"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"> <!-- レイアウトとして認識させる -->
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/layout/layout.css}">
+    <title>ニュースアプリ</title>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">
+            <a href="#">ニュースアプリ</a>
+        </h1>
+        <nav>
+            <ul class="header-ul">
+                <li class="header-list"><a>ユーザ名</a></li>
+                <li class="header-list">
+                    <a href="/logout">ログアウト</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <th:block layout:fragment="contents"></th:block> <!--メイン th:blockタグ：thymeleafの処理が書ける -->
+</body>
+</html>
